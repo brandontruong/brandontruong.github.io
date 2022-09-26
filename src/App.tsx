@@ -1,25 +1,41 @@
 import React from 'react';
+import 'normalize.css';
 import logo from './logo.svg';
+import './animate.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './img/icons/css/ionicons.css';
+import './img/font-awesome/css/font-awesome.css';
+import 'lightbox2/dist/css/lightbox.min.css'
+import './style.css';
+
+//import js libraries
+import 'jquery/dist/jquery.min.js';
+import 'popper.js/dist/popper.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import './libs/easing.js';
+import 'lightbox2/dist/js/lightbox.min.js';
 import './App.css';
+
+//import components
+import Navbar from './components/navbar.jsx';
+import Intro from './components/intro';
+import About from './components/about.jsx';
+import Portfolio from './components/portfolio.jsx';
+import Contact from './components/contact.jsx';
+import BackToTop from './components/back-top.jsx';
+import Preloader from './components/preloader';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload. Typescript is here to stay
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+        <Navbar />
+        <Intro />
+        <About />
+        <Portfolio />
+        <Contact />
+        <BackToTop /> 
+        <Preloader />
+    </React.Fragment>
   );
 }
 
