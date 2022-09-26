@@ -19,7 +19,8 @@ const Intro = () => (
                 strings={[
                   "Front End Developer",
                   "Nodejs Developer",
-                  "Software Engineer"
+                  "Software Engineer",
+                  "Team Player"
                 ]}
                 typeSpeed={80}
                 backDelay={1100}
