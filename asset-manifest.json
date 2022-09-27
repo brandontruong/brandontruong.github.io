@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7f05af95.css",
-    "main.js": "/static/js/main.5a1b5ea0.js",
+    "main.js": "/static/js/main.26d793a4.js",
     "static/js/787.8e95ede0.chunk.js": "/static/js/787.8e95ede0.chunk.js",
     "static/media/earth.jpg": "/static/media/earth.a08c82a61f5bf923991e.jpg",
     "static/media/pickles.png": "/static/media/pickles.bfea0ba92cff34295c01.png",
@@ -15,6 +15,7 @@
     "static/media/ionicons.ttf?v=2.0.0": "/static/media/ionicons.1fa6a1e8581aaedf7344.ttf",
     "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/CV.pdf": "/static/media/CV.18a0fe59de37f582e732.pdf",
     "static/media/ionicons.eot?v=2.0.0": "/static/media/ionicons.68e3a4f9a8d8c679b4ae.eot",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
@@ -22,11 +23,11 @@
     "static/media/brandontruong.jpg": "/static/media/brandontruong.f8c01ae235c7f00914f5.jpg",
     "index.html": "/index.html",
     "main.7f05af95.css.map": "/static/css/main.7f05af95.css.map",
-    "main.5a1b5ea0.js.map": "/static/js/main.5a1b5ea0.js.map",
+    "main.26d793a4.js.map": "/static/js/main.26d793a4.js.map",
     "787.8e95ede0.chunk.js.map": "/static/js/787.8e95ede0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f05af95.css",
-    "static/js/main.5a1b5ea0.js"
+    "static/js/main.26d793a4.js"
   ]
 }
