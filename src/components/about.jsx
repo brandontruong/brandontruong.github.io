@@ -40,7 +40,7 @@ const About = () => {
       {
         id: "first-p-about",
         content:
-          "Been in IT industry for more than 10 years now, I've done lot of web development, content management system, mobile app, etc...",
+          "Been in IT industry for more than 20 years now, I've done lot of web development, content management system, mobile app, etc...",
       },
       {
         id: "second-p-about",
@@ -48,12 +48,8 @@ const About = () => {
       },
       {
         id: "third-p-about",
-        content: `Specialties: Silverlight, WCF, WPF, Ria WCF Services, Entity Framework, Ajax, Jquery, HTML, JavaScript, CSS
-          Classic ASP, ASP.Net 2003, ASP.Net 2005, VB.net, C#
-          SQL2000, SQL2005, SQL2008
-          Photoshop, Paint.net
-          Automation test - Selenium, Microsoft UI Coded test
-          Behaviour driven development - SpecFlow`,
+        content: `Specialties: ReactJS, VueJs, Angular, NodeJS, GraphQL, HTML, JavaScript, CSS
+          Photoshop, Paint.net, Automation test - Selenium, Microsoft UI Coded test, Behaviour driven development - SpecFlow`,
       },
     ],
   });

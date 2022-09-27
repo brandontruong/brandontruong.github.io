@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import siteminder from "../img/siteminder.png";
 import westpac from "../img/westpac.png";
 import asx from "../img/asx.png";
 import sca from "../img/sca.png";
+import nab from "../img/nab.png";
+import pickles from "../img/pickles.png";
 
 const Portfolio = () => {
-  const [state, setState] = useState({
+  const [state] = useState({
     portfolio: [
       {
         id: "siteminder",
@@ -35,6 +37,20 @@ const Portfolio = () => {
         subTitle: "Customer Pricing Platform",
         technologies: "ReactJS Redux Redux-Saga NodeJS Json-server",
         img: westpac,
+      },
+      {
+        id: "nabtrade",
+        title: "NAB Trade",
+        subTitle: "Share trade portal",
+        technologies: "ReactJS React-Native Redux Json-server Jest",
+        img: nab,
+      },
+      {
+        id: "pickles",
+        title: "Pickles Auction",
+        subTitle: "Buyer ID application",
+        technologies: "Angular4 Typescript React Redux Webpack Nodejs",
+        img: pickles,
       },
     ],
   });
