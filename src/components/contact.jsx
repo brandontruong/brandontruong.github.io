@@ -110,13 +110,18 @@ const Contact = () => {
                     </div>
                     <div className="socials">
                       <ul>
-                        {/* <li>
-                          <a href="" target="_blank" rel="noopener noreferrer">
+                        <li>
+                          <a
+                            target="_blank"
+                            role="button"
+                            href={require("../files/CV.pdf")}
+                            download="BrandonTruongCV"
+                          >
                             <span className="ico-circle">
-                              <i className="ion-social-codepen"></i>
+                              <i className="ion-document-text"></i>
                             </span>
                           </a>
-                        </li> */}
+                        </li>
                         <li>
                           <a
                             href="https://github.com/brandontruong"

@@ -31,11 +31,19 @@ const Intro = () => (
           </p>
           <p className="pt-3">
             <a
-              className="btn btn-primary btn js-scroll px-4"
+              className="btn btn-primary btn js-scroll px-4 mr-4"
               href="#work"
               role="button"
             >
               View My Work
+            </a>
+            <a 
+              className="btn btn-primary btn js-scroll px-4" 
+              target="_blank"
+              role="button" 
+              href={require("../files/CV.pdf")} 
+              download="BrandonTruongCV">
+                Download my CV
             </a>
           </p>
         </div>
