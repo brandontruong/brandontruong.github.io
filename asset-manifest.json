@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.7f05af95.css",
-    "main.js": "/static/js/main.8325ad76.js",
+    "main.js": "/static/js/main.bf62a542.js",
     "static/js/787.8e95ede0.chunk.js": "/static/js/787.8e95ede0.chunk.js",
     "static/media/earth.jpg": "/static/media/earth.a08c82a61f5bf923991e.jpg",
+    "static/media/pickles.png": "/static/media/pickles.bfea0ba92cff34295c01.png",
     "static/media/asx.png": "/static/media/asx.2490e8551d847f9e2317.png",
     "static/media/westpac.png": "/static/media/westpac.1cb16c9e1f9b3b95841a.png",
     "static/media/siteminder.png": "/static/media/siteminder.df6844ce3c44836bf52e.png",
@@ -21,11 +22,11 @@
     "static/media/brandontruong.jpg": "/static/media/brandontruong.f8c01ae235c7f00914f5.jpg",
     "index.html": "/index.html",
     "main.7f05af95.css.map": "/static/css/main.7f05af95.css.map",
-    "main.8325ad76.js.map": "/static/js/main.8325ad76.js.map",
+    "main.bf62a542.js.map": "/static/js/main.bf62a542.js.map",
     "787.8e95ede0.chunk.js.map": "/static/js/787.8e95ede0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f05af95.css",
-    "static/js/main.8325ad76.js"
+    "static/js/main.bf62a542.js"
   ]
 }
