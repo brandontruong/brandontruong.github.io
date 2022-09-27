@@ -1,58 +1,61 @@
 import React, { useState } from "react";
 
-const About = () =>  {
+const About = () => {
   const [state, setState] = useState({
     skills: [
       {
         id: "ReactJS_skill",
         content: "ReactJS",
         percentage: "90%",
-        value: "90"
+        value: "90",
       },
       {
         id: "VueJS_skill",
         content: "VueJS",
         percentage: "80%",
-        value: "80"
+        value: "80",
       },
-      { id: "AngularJS_skill", content: "AngularJS", percentage: "40%", value: "40" },
+      {
+        id: "AngularJS_skill",
+        content: "AngularJS",
+        percentage: "40%",
+        value: "40",
+      },
       { id: "HTML5_skill", content: "HTML5", percentage: "80%", value: "80" },
       { id: "CSS3_skill", content: "CSS3", percentage: "75%", value: "75" },
       {
         id: "JavaScript_skill",
         content: "JavaScript",
         percentage: "90%",
-        value: "90"
+        value: "90",
       },
       {
         id: "VanillaJS_skill",
         content: "VanillaJS",
         percentage: "85%",
-        value: "85"
+        value: "85",
       },
     ],
     about_me: [
       {
         id: "first-p-about",
         content:
-          "Been in IT industry for more than 10 years now, I've done lot of web development, content management system, mobile app, etc..."
+          "Been in IT industry for more than 10 years now, I've done lot of web development, content management system, mobile app, etc...",
       },
       {
         id: "second-p-about",
-        content:
-          `I have taken on different roles, done different tasks and used all different types of programming languages. I am always keeping myself up to date with technologies. That’s very important to keep me going in this fast pace of IT industry.`
+        content: `I have taken on different roles, done different tasks and used all different types of programming languages. I am always keeping myself up to date with technologies. That’s very important to keep me going in this fast pace of IT industry.`,
       },
       {
         id: "third-p-about",
-        content:
-          `Specialties: Silverlight, WCF, WPF, Ria WCF Services, Entity Framework, Ajax, Jquery, HTML, JavaScript, CSS
+        content: `Specialties: Silverlight, WCF, WPF, Ria WCF Services, Entity Framework, Ajax, Jquery, HTML, JavaScript, CSS
           Classic ASP, ASP.Net 2003, ASP.Net 2005, VB.net, C#
           SQL2000, SQL2005, SQL2008
           Photoshop, Paint.net
           Automation test - Selenium, Microsoft UI Coded test
-          Behaviour driven development - SpecFlow`
-      }
-    ]
+          Behaviour driven development - SpecFlow`,
+      },
+    ],
   });
 
   return (
@@ -72,21 +75,16 @@ const About = () =>  {
                         className="about-img"
                         style={{ textAlign: "center" }}
                       >
-                        <img
-                          className="img-fluid rounded b-shadow-a"
-                          alt=""
-                        />
+                        <img className="img-fluid rounded b-shadow-a" alt="" />
                       </div>
                     </div>
                   </div>
                   <div className="skill-mf">
-                    {state.skills.map(skill => {
+                    {state.skills.map((skill) => {
                       return (
                         <React.Fragment key={skill.id}>
                           <span>{skill.content}</span>{" "}
-                          <span className="pull-right">
-                            {skill.percentage}
-                          </span>
+                          <span className="pull-right">{skill.percentage}</span>
                           <div className="progress">
                             <div
                               className="progress-bar"
@@ -107,7 +105,7 @@ const About = () =>  {
                     <div className="title-box-2">
                       <h5 className="title-left">About Me</h5>
                     </div>
-                    {state.about_me.map(content => {
+                    {state.about_me.map((content) => {
                       return (
                         <p className="lead" key={content.id}>
                           {content.content}
@@ -123,6 +121,6 @@ const About = () =>  {
       </div>
     </section>
   );
-}
+};
 
 export default About;

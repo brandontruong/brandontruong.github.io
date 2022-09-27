@@ -1,14 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
-//import stock
-import stock from "../img/image1.jpg";
-// import stock1 from "../img/image2.jpg";
-// import stock2 from "../img/image3.jpg";
-// import stock3 from "../img/image4.jpg";
-// import stock4 from "../img/image5.jpg";
-// import stock5 from "../img/image6.jpg";
+import siteminder from "../img/siteminder.png";
+import westpac from "../img/westpac.png";
+import asx from "../img/asx.png";
+import sca from "../img/sca.png";
 
 const Portfolio = () => {
+  const [state, setState] = useState({
+    portfolio: [
+      {
+        id: "siteminder",
+        title: "Siteminder",
+        subTitle: "Platform Property",
+        technologies: "ReactJS VueJS TailwindCss NodeJS GraphQl",
+        img: siteminder,
+      },
+      {
+        id: "asx",
+        title: "ASX",
+        subTitle: "Chess UI",
+        technologies: "SingleSpa ReactJS Web-socket MaterialUI NodeJS GraphQl",
+        img: asx,
+      },
+      {
+        id: "southern-cross",
+        title: "Southern Cross",
+        subTitle: "Radio Station Platform",
+        technologies: "ReactJS Redux NextJs FormIO NodeJS Jest Jasmine",
+        img: sca,
+      },
+      {
+        id: "westpac",
+        title: "Westpac",
+        subTitle: "Customer Pricing Platform",
+        technologies: "ReactJS Redux Redux-Saga NodeJS Json-server",
+        img: westpac,
+      },
+    ],
+  });
+
   return (
     <section id="work" className="portfolio-mf sect-pt4 route">
       <div className="container">
@@ -17,40 +47,46 @@ const Portfolio = () => {
             <div className="title-box text-center">
               <h3 className="title-a">Portfolio</h3>
               <p className="subtitle-a">
-                Incididunt nostrud id aute culpa excepteur pariatur consequat
-                elit culpa nulla enim anim incididunt.
+                Senior developer with more than 20 years of experience in cross
+                platform web application development and enterprise application
+                development.
               </p>
               <div className="line-mf"></div>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4">
-            <div className="work-box">
-              <a href={stock} data-lightbox="gallery-vmarine">
-                <div className="work-img">
-                  <img src={stock} alt="" className="img-fluid" />
-                </div>
-                <div className="work-content">
-                  <div className="row">
-                    <div className="col-sm-8">
-                      <h2 className="w-title">Lorem Ipsum</h2>
-                      <div className="w-more">
-                        <span className="w-ctegory">
-                          HTML5 CSS3 Bootstrap ReactJS
-                        </span>
+          {state.portfolio.map((item) => {
+            return (
+              <div className="col-md-4">
+                <div className="work-box">
+                  <a href={item.img} data-lightbox="gallery-vmarine">
+                    <div className="work-img">
+                      <img src={item.img} alt="" className="img-fluid" />
+                    </div>
+                    <div className="work-content">
+                      <div className="row">
+                        <div className="col-sm-8">
+                          <h2 className="w-title">{item.title}</h2>
+                          <h4 className="w-sub-title">{item.subTitle}</h4>
+                          <div className="w-more">
+                            <span className="w-ctegory">
+                              {item.technologies}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="col-sm-4">
+                          <div className="w-like">
+                            <span className="ion-ios-plus-outline"></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="col-sm-4">
-                      <div className="w-like">
-                        <span className="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

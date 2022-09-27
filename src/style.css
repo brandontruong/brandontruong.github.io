@@ -711,6 +711,7 @@ PORTFOLIO
 .work-img {
   display: block;
   overflow: hidden;
+  height: 200px;
 }
 
 .work-img img {
@@ -746,6 +747,10 @@ PORTFOLIO
 
 .w-title {
   font-size: 1.2rem;
+}
+
+.w-sub-title {
+  font-size: .8rem;
 }
 
 /*
