@@ -19,7 +19,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <form
-                        action="https://formspree.io/xdoeonlo"
+                        action="https://formspree.io/f/mlevbawq"
                         method="POST"
                         className="contactForm"
                       >
@@ -110,22 +110,30 @@ const Contact = () => {
                     </div>
                     <div className="socials">
                       <ul>
-                        <li>
+                        {/* <li>
                           <a href="" target="_blank" rel="noopener noreferrer">
                             <span className="ico-circle">
                               <i className="ion-social-codepen"></i>
                             </span>
                           </a>
-                        </li>
+                        </li> */}
                         <li>
-                          <a href="" target="_blank" rel="noopener noreferrer">
+                          <a
+                            href="https://github.com/brandontruong"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <span className="ico-circle">
                               <i className="ion-social-github"></i>
                             </span>
                           </a>
                         </li>
                         <li>
-                          <a href="" target="_blank" rel="noopener noreferrer">
+                          <a
+                            href="https://www.linkedin.com/in/brandontruong/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <span className="ico-circle">
                               <i className="ion-social-linkedin"></i>
                             </span>
