@@ -1,6 +1,5 @@
 import React from 'react';
 import 'normalize.css';
-import logo from './logo.svg';
 import './animate.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './img/icons/css/ionicons.css';
