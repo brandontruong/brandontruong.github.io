@@ -1,59 +1,36 @@
-import { useState } from "react";
-
-import siteminder from "../img/siteminder.png";
-import westpac from "../img/westpac.png";
-import asx from "../img/asx.png";
-import sca from "../img/sca.png";
-import nab from "../img/nab.png";
-import pickles from "../img/pickles.png";
+import { useState, useEffect } from "react";
+import { request } from "graphql-request";
 
 const Portfolio = () => {
-  const [state] = useState({
-    portfolio: [
-      {
-        id: "siteminder",
-        title: "Siteminder",
-        subTitle: "Platform Property",
-        technologies: "ReactJS VueJS TailwindCss NodeJS GraphQl",
-        img: siteminder,
-      },
-      {
-        id: "asx",
-        title: "ASX",
-        subTitle: "Chess UI",
-        technologies: "SingleSpa ReactJS Web-socket MaterialUI NodeJS GraphQl",
-        img: asx,
-      },
-      {
-        id: "southern-cross",
-        title: "Southern Cross",
-        subTitle: "Radio Station Platform",
-        technologies: "ReactJS Redux NextJs FormIO NodeJS Jest Jasmine",
-        img: sca,
-      },
-      {
-        id: "westpac",
-        title: "Westpac",
-        subTitle: "Customer Pricing Platform",
-        technologies: "ReactJS Redux Redux-Saga NodeJS Json-server",
-        img: westpac,
-      },
-      {
-        id: "nabtrade",
-        title: "NAB Trade",
-        subTitle: "Share trade portal",
-        technologies: "ReactJS React-Native Redux Json-server Jest",
-        img: nab,
-      },
-      {
-        id: "pickles",
-        title: "Pickles Auction",
-        subTitle: "Buyer ID application",
-        technologies: "Angular4 Typescript React Redux Webpack Nodejs",
-        img: pickles,
-      },
-    ],
+  const [state, setState] = useState({
+    portfolio: [],
   });
+
+  useEffect(() => {
+    const fetchPorfolios = async () => {
+      const { portfolios } = await request(
+        "https://api-ap-southeast-2.hygraph.com/v2/cl8kxng6b27zd01ue4gv0hdz8/master",
+        `
+          {
+            portfolios {
+              title
+              subTitle
+              technologies
+              image {
+                url
+              }
+            }
+          }
+        `
+      );
+
+      setState((previousState) => {
+        return { ...previousState, portfolio: portfolios };
+      });
+    };
+
+    fetchPorfolios();
+  }, []);
 
   return (
     <section id="work" className="portfolio-mf sect-pt4 route">
@@ -74,11 +51,15 @@ const Portfolio = () => {
         <div className="row">
           {state.portfolio.map((item) => {
             return (
-              <div className="col-md-4">
+              <div className="col-md-4" key={item.title}>
                 <div className="work-box">
-                  <a href={item.img} data-lightbox="gallery-vmarine">
+                  <a href={item.image[0].url} data-lightbox="gallery-vmarine">
                     <div className="work-img">
-                      <img src={item.img} alt="" className="img-fluid" />
+                      <img
+                        src={item.image[0].url}
+                        alt=""
+                        className="img-fluid"
+                      />
                     </div>
                     <div className="work-content">
                       <div className="row">
