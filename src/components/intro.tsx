@@ -28,22 +28,25 @@ const Intro = () => {
               />
             </strong>
           </p>
-          <p className="pt-3">
-            <a
-              className="btn btn-primary btn js-scroll px-4 mr-4"
-              href="#work"
-              role="button"
-            >
-              View My Work
-            </a>
-            <a 
-              className="btn btn-primary btn js-scroll px-4" 
-              target="_blank"
-              role="button" 
-              href={url} 
-              download="BrandonTruongCV" rel="noreferrer">
-                Download my CV
-            </a>
+          <p className="pt-3 intro-content-buttons">
+            <div>
+              <a
+                className="btn btn-primary btn js-scroll px-4 m-2"
+                href="#work"
+                role="button"
+              >
+                View My Work
+              </a>
+              <a 
+                className="btn btn-primary btn js-scroll px-4 m-2" 
+                target="_blank"
+                role="button" 
+                href={url} 
+                download="BrandonTruongCV" rel="noreferrer">
+                  Download my CV
+              </a>
+            </div>
+          
           </p>
         </div>
       </div>
