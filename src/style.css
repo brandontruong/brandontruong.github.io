@@ -318,6 +318,7 @@ a:hover {
 .back-to-top {
   position: fixed;
   display: none;
+  border:none;
   background: #0078ff;
   color: #fff;
   width: 44px;
@@ -333,7 +334,6 @@ a:hover {
 }
 
 .back-to-top i {
-  padding-top: 12px;
   color: #fff;
 }
 

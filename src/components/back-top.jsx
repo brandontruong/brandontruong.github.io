@@ -1,29 +1,36 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import $ from "jquery";
 import "../libs/easing.js";
 
 const BackToTop = () => {
+  const backToTopElement = useRef();
+
   useEffect(() => {
-    $(".back-to-top").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
-      return false;
-    });
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 100) {
-        document.querySelector(".back-to-top").classList.remove("fadeOut");
-        document.querySelector(".back-to-top").style.display = "block";
-        document.querySelector(".back-to-top").classList.add("fadeIn");
+        backToTopElement.current.classList.remove("fadeOut");
+        backToTopElement.current.style.display = "block";
+        backToTopElement.current.classList.add("fadeIn");
       } else {
-        document.querySelector(".back-to-top").classList.remove("fadeIn");
-        document.querySelector(".back-to-top").classList.add("fadeOut");
+        backToTopElement.current.classList.remove("fadeIn");
+        backToTopElement.current.classList.add("fadeOut");
       }
     });
   }, []);
 
+  const onClickHandler = useCallback(() => {
+    $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+    return false;
+  }, []);
+
   return (
-    <a href="#" className="back-to-top animated">
+    <button
+      onClick={onClickHandler}
+      className="back-to-top animated"
+      ref={backToTopElement}
+    >
       <i className="fa fa-chevron-up"></i>
-    </a>
+    </button>
   );
 };
 
