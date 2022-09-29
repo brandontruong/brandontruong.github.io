@@ -48,6 +48,7 @@ const App = () => {
     firstName: '',
     lastName: 'Truong',
     features: [''],
+    skillGraph: { skills: []},
     cv: { url: ''},
     aboutMe: { html: '' },
 
@@ -63,6 +64,7 @@ const App = () => {
             firstName
             lastName
             features
+            skillGraph
             aboutMe {
               html
             }

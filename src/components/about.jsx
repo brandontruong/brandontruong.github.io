@@ -1,47 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useUserProfile } from "../App";
 
 const About = () => {
   const {
     aboutMe: { html },
+    skillGraph,
   } = useUserProfile();
-
-  const [state, setState] = useState({
-    skills: [
-      {
-        id: "ReactJS_skill",
-        content: "ReactJS",
-        percentage: "90%",
-        value: "90",
-      },
-      {
-        id: "VueJS_skill",
-        content: "VueJS",
-        percentage: "80%",
-        value: "80",
-      },
-      {
-        id: "AngularJS_skill",
-        content: "AngularJS",
-        percentage: "40%",
-        value: "40",
-      },
-      { id: "HTML5_skill", content: "HTML5", percentage: "80%", value: "80" },
-      { id: "CSS3_skill", content: "CSS3", percentage: "75%", value: "75" },
-      {
-        id: "JavaScript_skill",
-        content: "JavaScript",
-        percentage: "90%",
-        value: "90",
-      },
-      {
-        id: "VanillaJS_skill",
-        content: "VanillaJS",
-        percentage: "85%",
-        value: "85",
-      },
-    ],
-  });
 
   return (
     <section id="about" className="about-mf sect-pt4 route">
@@ -65,7 +29,7 @@ const About = () => {
                     </div>
                   </div>
                   <div className="skill-mf">
-                    {state.skills.map((skill) => {
+                    {skillGraph.skills.map((skill) => {
                       return (
                         <React.Fragment key={skill.id}>
                           <span>{skill.content}</span>{" "}
