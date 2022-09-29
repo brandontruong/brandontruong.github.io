@@ -1,6 +1,4 @@
-import React from "react";
-
-import { useUserProfile } from '../App'
+import { useUserProfile } from "../App"
 
 import "./stars.scss";
 import Typed from "react-typed";

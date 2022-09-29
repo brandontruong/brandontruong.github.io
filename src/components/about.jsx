@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import { useUserProfile } from "../App";
 
 const About = () => {
+  const {
+    aboutMe: { html },
+  } = useUserProfile();
+
   const [state, setState] = useState({
     skills: [
       {
@@ -34,22 +39,6 @@ const About = () => {
         content: "VanillaJS",
         percentage: "85%",
         value: "85",
-      },
-    ],
-    about_me: [
-      {
-        id: "first-p-about",
-        content:
-          "Been in IT industry for more than 20 years now, I've done lot of web development, content management system, mobile app, etc...",
-      },
-      {
-        id: "second-p-about",
-        content: `I have taken on different roles, done different tasks and used all different types of programming languages. I am always keeping myself up to date with technologies. That’s very important to keep me going in this fast pace of IT industry.`,
-      },
-      {
-        id: "third-p-about",
-        content: `Specialties: ReactJS, VueJs, Angular, NodeJS, GraphQL, HTML, JavaScript, CSS
-          Photoshop, Paint.net, Automation test - Selenium, Microsoft UI Coded test, Behaviour driven development - SpecFlow`,
       },
     ],
   });
@@ -101,13 +90,7 @@ const About = () => {
                     <div className="title-box-2">
                       <h5 className="title-left">About Me</h5>
                     </div>
-                    {state.about_me.map((content) => {
-                      return (
-                        <p className="lead" key={content.id}>
-                          {content.content}
-                        </p>
-                      );
-                    })}
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
                   </div>
                 </div>
               </div>

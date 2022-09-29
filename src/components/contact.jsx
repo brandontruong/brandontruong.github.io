@@ -1,6 +1,11 @@
+import { useUserProfile } from "../App";
 import imageOverlay from "../img/earth.jpg";
 
 const Contact = () => {
+  const {
+    cv: { url },
+  } = useUserProfile();
+
   return (
     <section
       className="paralax-mf footer-paralax bg-image sect-mt4 route"
@@ -114,8 +119,9 @@ const Contact = () => {
                           <a
                             target="_blank"
                             role="button"
-                            href={require("../files/CV.pdf")}
+                            href={url}
                             download="BrandonTruongCV"
+                            rel="noreferrer"
                           >
                             <span className="ico-circle">
                               <i className="ion-document-text"></i>

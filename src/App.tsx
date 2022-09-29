@@ -47,8 +47,9 @@ const App = () => {
   const [user, setUser] = useState({
     firstName: '',
     lastName: 'Truong',
-    features: [],
-    cv: { url: ''}
+    features: [''],
+    cv: { url: ''},
+    aboutMe: { html: '' },
 
   });
 
@@ -62,6 +63,9 @@ const App = () => {
             firstName
             lastName
             features
+            aboutMe {
+              html
+            }
             cv {
               fileName
               url
