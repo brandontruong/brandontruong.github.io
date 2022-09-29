@@ -51,6 +51,10 @@ const App = () => {
     cv: { url: "" },
     aboutMe: { html: "" },
     portfolioSummary: { html: "" },
+    backgroundImage: {
+      url: ''
+    },
+    pictures: [{url: ''}]
   });
 
   const [loading, setLoading] = useState(true)
@@ -65,6 +69,12 @@ const App = () => {
             lastName
             features
             skillGraph
+            backgroundImage {
+              url
+            }
+            pictures {
+              url
+            }
             aboutMe {
               html
             }

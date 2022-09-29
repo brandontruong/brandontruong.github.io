@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import $ from "jquery";
 
-import logo1 from "../img/brandontruong_color.jpg";
-import logo2 from "../img/brandontruong.jpg";
+import { useUserProfile } from "../App";
 
 const Navbar = () => {
+  const { pictures: logos } = useUserProfile();
+
   const [state, setState] = useState({
-    logo: logo1,
+    logo: logos[0],
   });
 
   useEffect(() => {
@@ -36,7 +37,7 @@ const Navbar = () => {
         document
           .querySelector(".navbar-expand-md")
           .classList.remove("navbar-trans");
-        setState({ logo: logo2 });
+        setState({ logo: logos[1] });
       } else {
         document
           .querySelector(".navbar-expand-md")
@@ -44,7 +45,7 @@ const Navbar = () => {
         document
           .querySelector(".navbar-expand-md")
           .classList.remove("navbar-reduce");
-        setState({ logo: logo1 });
+        setState({ logo: logos[0] });
       }
     });
 
@@ -83,7 +84,7 @@ const Navbar = () => {
     >
       <div className="container">
         <a className="navbar-brand js-scroll" href="#page-top">
-          <img src={state.logo} alt="logo" style={{ maxWidth: "100px" }} />
+          <img src={state.logo.url} alt="logo" style={{ maxWidth: "100px" }} />
         </a>
         <button
           className="navbar-toggler collapsed"

@@ -1,9 +1,9 @@
 import { useUserProfile } from "../App";
-import imageOverlay from "../img/earth.jpg";
 
 const Contact = () => {
   const {
     cv: { url },
+    backgroundImage: { url: imageOverlay },
   } = useUserProfile();
 
   return (
