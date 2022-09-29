@@ -23,7 +23,6 @@ import About from "./components/about.jsx";
 import Portfolio from "./components/portfolio.jsx";
 import Contact from "./components/contact.jsx";
 import BackToTop from "./components/back-top.jsx";
-import Preloader from "./components/preloader";
 
 /**
  * A helper to create a Context and Provider with no upfront default value, and
@@ -46,7 +45,7 @@ export const [useUserProfile, CurrentUserProvider] = createCtx<{}>();
 const App = () => {
   const [user, setUser] = useState({
     firstName: "",
-    lastName: "Truong",
+    lastName: "",
     features: [""],
     skillGraph: { skills: [] },
     cv: { url: "" },
@@ -54,6 +53,7 @@ const App = () => {
     portfolioSummary: { html: "" },
   });
 
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     const fetchPorfolios = async () => {
       const { userProfile } = await request(
@@ -83,6 +83,11 @@ const App = () => {
       setUser((previousState) => {
         return { ...previousState, ...userProfile };
       });
+
+      setLoading(() => {
+        return false
+      });
+      
     };
 
     fetchPorfolios();
@@ -90,6 +95,7 @@ const App = () => {
 
   return (
     <React.Fragment>
+      { loading? (<div id="preloader"></div>):
       <CurrentUserProvider value={user}>
         <Navbar />
         <Intro />
@@ -97,8 +103,9 @@ const App = () => {
         <Portfolio />
         <Contact />
         <BackToTop />
-        <Preloader />
       </CurrentUserProvider>
+      }
+      
     </React.Fragment>
   );
 };
