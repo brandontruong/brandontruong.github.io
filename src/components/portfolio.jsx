@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { request } from "graphql-request";
+import { useUserProfile } from "../App";
 
 const Portfolio = () => {
+  const {
+    portfolioSummary: { html },
+  } = useUserProfile();
+
   const [state, setState] = useState({
     portfolio: [],
   });
@@ -39,11 +44,7 @@ const Portfolio = () => {
           <div className="col-sm-12">
             <div className="title-box text-center">
               <h3 className="title-a">Portfolio</h3>
-              <p className="subtitle-a">
-                Senior developer with more than 20 years of experience in cross
-                platform web application development and enterprise application
-                development.
-              </p>
+              <div dangerouslySetInnerHTML={{ __html: html }} />
               <div className="line-mf"></div>
             </div>
           </div>
