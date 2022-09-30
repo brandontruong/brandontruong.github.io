@@ -63,6 +63,9 @@ const App = () => {
 
   const [loading, setLoading] = useState(true)
   useEffect(() => {
+
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    
     const fetchPorfolios = async () => {
       const { userProfile } = await request(
         "https://api-ap-southeast-2.hygraph.com/v2/cl8kxng6b27zd01ue4gv0hdz8/master",
