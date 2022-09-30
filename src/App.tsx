@@ -24,6 +24,10 @@ import Portfolio from "./components/portfolio.jsx";
 import Contact from "./components/contact.jsx";
 import BackToTop from "./components/back-top.jsx";
 
+import ReactGA from 'react-ga';
+const TRACKING_ID = "UA-243694608-1"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
 /**
  * A helper to create a Context and Provider with no upfront default value, and
  * without having to check for undefined all the time.
