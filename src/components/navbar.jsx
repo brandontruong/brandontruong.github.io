@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import $ from "jquery";
-import useAnalyticsEventTracker from "../useAnalyticsEventTracker";
 
 import { useUserProfile } from "../App";
 
 const Navbar = () => {
-  const gaEventTracker = useAnalyticsEventTracker("Navbar");
-
   const { pictures: logos } = useUserProfile();
 
   const [state, setState] = useState({
@@ -108,38 +105,22 @@ const Navbar = () => {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a
-                className="nav-link js-scroll active"
-                href="#home"
-                onClick={() => gaEventTracker("Home")}
-              >
+              <a className="nav-link js-scroll active" href="#home">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link js-scroll"
-                href="#about"
-                onClick={() => gaEventTracker("About")}
-              >
+              <a className="nav-link js-scroll" href="#about">
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link js-scroll"
-                href="#work"
-                onClick={() => gaEventTracker("Work")}
-              >
+              <a className="nav-link js-scroll" href="#work">
                 Work
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link js-scroll"
-                href="#contact"
-                onClick={() => gaEventTracker("Contact")}
-              >
+              <a className="nav-link js-scroll" href="#contact">
                 Contact
               </a>
             </li>
