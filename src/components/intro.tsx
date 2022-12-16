@@ -1,13 +1,8 @@
-import { useEffect } from "react";
-import ReactGA from "react-ga";
 import Typed from "react-typed";
 import { useUserProfile } from "../App";
 import "./stars.scss";
 
 const Intro = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + "/info");
-  }, []);
   const {
     firstName,
     lastName,

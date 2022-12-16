@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
 import $ from "jquery";
-
+import { useEffect, useState } from "react";
+import ReactGA from "react-ga";
 import { useUserProfile } from "../App";
 
 const Navbar = () => {
@@ -25,7 +25,8 @@ const Navbar = () => {
       offset: navHeight,
     });
 
-    $(".js-scroll").on("click", function () {
+    $(".js-scroll").off('click').on("click", function (event) {
+      ReactGA.pageview(event.currentTarget.href);
       $(".navbar-collapse").collapse("hide");
     });
 
@@ -52,7 +53,7 @@ const Navbar = () => {
     $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
       if (
         window.location.pathname.replace(/^\//, "") ===
-          this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
         window.location.hostname === this.hostname
       ) {
         var target = $(this.hash);
@@ -70,10 +71,6 @@ const Navbar = () => {
           return false;
         }
       }
-    });
-
-    $(".js-scroll").on("click", function () {
-      $(".navbar-collapse").collapse("hide");
     });
   }, []);
 

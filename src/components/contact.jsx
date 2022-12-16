@@ -1,11 +1,6 @@
-import { useEffect } from "react";
 import { useUserProfile } from "../App";
-import ReactGA from "react-ga";
 
 const Contact = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + "/contact");
-  }, []);
   const {
     cv: { url },
     backgroundImage: { url: imageOverlay },

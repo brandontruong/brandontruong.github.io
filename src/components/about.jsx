@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
+import React from "react";
+
 import { useUserProfile } from "../App";
 
 const About = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + "/about");
-  }, []);
   const {
     aboutMe: { html },
     skillGraph,
