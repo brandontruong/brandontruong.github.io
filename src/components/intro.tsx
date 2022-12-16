@@ -1,3 +1,5 @@
+import { useCallback } from "react";
+import ReactGA from "react-ga";
 import Typed from "react-typed";
 import { useUserProfile } from "../App";
 import "./stars.scss";
@@ -9,6 +11,15 @@ const Intro = () => {
     features,
     cv: { url },
   } = useUserProfile() as any;
+
+  const handleOnCVDownload = useCallback(() => {
+    ReactGA.event({
+      category: "Intro",
+      action: "Click",
+      label: "Download CV",
+    });
+  }, []);
+
   return (
     <div id="home" className="intro route bg-image background">
       <div id="stars" />
@@ -50,6 +61,7 @@ const Intro = () => {
                   href={url}
                   download="BrandonTruongCV"
                   rel="noreferrer"
+                  onClick={handleOnCVDownload}
                 >
                   Download my CV
                 </a>

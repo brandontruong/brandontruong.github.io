@@ -1,3 +1,5 @@
+import { useCallback } from "react";
+import ReactGA from "react-ga";
 import { useUserProfile } from "../App";
 
 const Contact = () => {
@@ -5,6 +7,14 @@ const Contact = () => {
     cv: { url },
     backgroundImage: { url: imageOverlay },
   } = useUserProfile();
+
+  const handleOnCVDownload = useCallback(() => {
+    ReactGA.event({
+      category: "Contact",
+      action: "Click",
+      label: "Download CV",
+    });
+  }, []);
 
   return (
     <section
@@ -121,6 +131,8 @@ const Contact = () => {
                             role="button"
                             href={url}
                             download="BrandonTruongCV"
+                            title={`BrandonTruong's CV`}
+                            onClick={handleOnCVDownload}
                             rel="noreferrer"
                           >
                             <span className="ico-circle">
@@ -132,6 +144,7 @@ const Contact = () => {
                           <a
                             href="https://github.com/brandontruong"
                             target="_blank"
+                            title={`BrandonTruong's Github`}
                             rel="noopener noreferrer"
                           >
                             <span className="ico-circle">
@@ -143,6 +156,7 @@ const Contact = () => {
                           <a
                             href="https://www.linkedin.com/in/brandontruong/"
                             target="_blank"
+                            title={`BrandonTruong's LinkedIn`}
                             rel="noopener noreferrer"
                           >
                             <span className="ico-circle">
