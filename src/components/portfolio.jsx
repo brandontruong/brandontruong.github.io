@@ -1,8 +1,12 @@
-import { useState, useEffect } from "react";
 import { request } from "graphql-request";
+import { useEffect, useState } from "react";
+import ReactGA from "react-ga";
 import { useUserProfile } from "../App";
 
 const Portfolio = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + "/porfolio");
+  }, []);
   const {
     portfolioSummary: { html },
   } = useUserProfile();
