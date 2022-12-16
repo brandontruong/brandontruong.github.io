@@ -26,7 +26,7 @@ const Navbar = () => {
     });
 
     $(".js-scroll").off('click').on("click", function (event) {
-      ReactGA.pageview(event.currentTarget.href);
+      ReactGA.pageview(event.currentTarget.attributes['href'].value);
       $(".navbar-collapse").collapse("hide");
     });
 
