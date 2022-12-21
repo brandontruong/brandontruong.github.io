@@ -1,5 +1,6 @@
 import { request } from "graphql-request";
 import { useEffect, useState } from "react";
+import _ from 'lodash';
 import { useUserProfile } from "../App";
 
 const Portfolio = () => {
@@ -21,6 +22,7 @@ const Portfolio = () => {
               title
               subTitle
               technologies
+              displayOrder
               image {
                 url
               }
@@ -30,7 +32,7 @@ const Portfolio = () => {
       );
 
       setState((previousState) => {
-        return { ...previousState, portfolio: portfolios };
+        return { ...previousState, portfolio:  _.orderBy(portfolios, ['displayOrder'], ['desc']) };
       });
     };
 
