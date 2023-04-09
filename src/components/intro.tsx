@@ -1,6 +1,8 @@
 import { useCallback } from "react";
 import ReactGA from "react-ga";
 import Typed from "react-typed";
+import Lottie from 'react-lottie-player';
+import lottieJson from '../porfolio.json';
 import { useUserProfile } from "../App";
 import "./stars.scss";
 
@@ -67,6 +69,12 @@ const Intro = () => {
                 </a>
               </div>
             </p>
+            <Lottie
+              loop
+              animationData={lottieJson}
+              play
+              style={{ width: 'auto', height: 250 }}
+            />
           </div>
         </div>
       </div>
