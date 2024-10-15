@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b424772.css",
-    "main.js": "/static/js/main.af9a1b6c.js",
-    "static/js/496.52c8249f.chunk.js": "/static/js/496.52c8249f.chunk.js",
+    "main.css": "/static/css/main.b1845d1b.css",
+    "main.js": "/static/js/main.ed137c08.js",
+    "static/js/496.840e9dc9.chunk.js": "/static/js/496.840e9dc9.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/ionicons.svg?v=2.0.0": "/static/media/ionicons.b45d332f6829d6813600.svg",
     "static/media/ionicons.ttf?v=2.0.0": "/static/media/ionicons.1fa6a1e8581aaedf7344.ttf",
@@ -13,12 +13,12 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/ionicons.woff?v=2.0.0": "/static/media/ionicons.0b4ad6170d93c4aa91ee.woff",
     "index.html": "/index.html",
-    "main.9b424772.css.map": "/static/css/main.9b424772.css.map",
-    "main.af9a1b6c.js.map": "/static/js/main.af9a1b6c.js.map",
-    "496.52c8249f.chunk.js.map": "/static/js/496.52c8249f.chunk.js.map"
+    "main.b1845d1b.css.map": "/static/css/main.b1845d1b.css.map",
+    "main.ed137c08.js.map": "/static/js/main.ed137c08.js.map",
+    "496.840e9dc9.chunk.js.map": "/static/js/496.840e9dc9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b424772.css",
-    "static/js/main.af9a1b6c.js"
+    "static/css/main.b1845d1b.css",
+    "static/js/main.ed137c08.js"
   ]
 }
