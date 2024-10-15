@@ -36,14 +36,9 @@ const About = () => {
                           <span>{skill.content}</span>{" "}
                           <span className="pull-right">{skill.percentage}</span>
                           <div className="progress">
-                            <div
-                              className="progress-bar"
-                              role="progressbar"
-                              style={{ width: skill.percentage }}
-                              aria-valuenow={skill.value}
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
+                            <div style={{ width: skill.percentage }}>
+                              <span className="progress-bar"></span>
+                            </div>
                           </div>
                         </React.Fragment>
                       );

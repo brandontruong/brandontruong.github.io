@@ -698,6 +698,12 @@ ABOUT
 .skill-mf .progress .progress-bar {
   height: .7rem;
   background-color: #0078ff;
+  animation: progressBar 3s ease-in-out;
+}
+
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: 100%; }
 }
 
 /*
