@@ -1,10 +1,10 @@
-import { useCallback } from "react";
-import ReactGA from "react-ga";
-import Typed from "react-typed";
+import { useCallback } from 'react';
+import ReactGA from 'react-ga';
+import { ReactTyped } from 'react-typed';
 import Lottie from 'react-lottie-player';
 import lottieJson from '../porfolio.json';
-import { useUserProfile } from "../App";
-import "./stars.scss";
+import { useUserProfile } from '../App';
+import './stars.scss';
 
 const Intro = () => {
   const {
@@ -16,29 +16,29 @@ const Intro = () => {
 
   const handleOnCVDownload = useCallback(() => {
     ReactGA.event({
-      category: "Intro",
-      action: "Click",
-      label: "Download CV",
+      category: 'Intro',
+      action: 'Click',
+      label: 'Download CV',
     });
   }, []);
 
   return (
-    <div id="home" className="intro route bg-image background">
-      <div id="stars" />
-      <div id="stars2" />
-      <div id="stars3" />
+    <div id='home' className='intro route bg-image background'>
+      <div id='stars' />
+      <div id='stars2' />
+      <div id='stars3' />
 
-      <div className="intro-content display-table">
-        <div className="table-cell">
-          <div className="container">
-            <h1 className="intro-title mb-4">
+      <div className='intro-content display-table'>
+        <div className='table-cell'>
+          <div className='container'>
+            <h1 className='intro-title mb-4'>
               Hello, My name is {`${firstName} ${lastName}`}
             </h1>
 
-            <p className="intro-subtitle">
-              <span className="text-slider-items"></span>
-              <strong className="text-slider">
-                <Typed
+            <p className='intro-subtitle'>
+              <span className='text-slider-items'></span>
+              <strong className='text-slider'>
+                <ReactTyped
                   strings={features}
                   typeSpeed={80}
                   backDelay={1100}
@@ -47,22 +47,22 @@ const Intro = () => {
                 />
               </strong>
             </p>
-            <p className="pt-3 intro-content-buttons">
+            <p className='pt-3 intro-content-buttons'>
               <div>
                 <a
-                  className="btn btn-primary btn js-scroll px-4 m-2"
-                  href="#work"
-                  role="button"
+                  className='btn btn-primary btn js-scroll px-4 m-2'
+                  href='#work'
+                  role='button'
                 >
                   View My Work
                 </a>
                 <a
-                  className="btn btn-primary btn js-scroll px-4 m-2"
-                  target="_blank"
-                  role="button"
+                  className='btn btn-primary btn js-scroll px-4 m-2'
+                  target='_blank'
+                  role='button'
                   href={url}
-                  download="BrandonTruongCV"
-                  rel="noreferrer"
+                  download='BrandonTruongCV'
+                  rel='noreferrer'
                   onClick={handleOnCVDownload}
                 >
                   Download my CV
