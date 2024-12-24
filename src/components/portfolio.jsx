@@ -2,6 +2,8 @@ import { request } from 'graphql-request';
 import { useEffect, useState } from 'react';
 import _ from 'lodash';
 import { useUserProfile } from '../App';
+import Lottie from 'react-lottie-player';
+import lottieJson from '../assets/porfolio.json';
 
 const Portfolio = () => {
   const {
@@ -48,7 +50,16 @@ const Portfolio = () => {
         <div className='row'>
           <div className='col-sm-12'>
             <div className='title-box text-center'>
-              <h3 className='title-a'>Portfolio</h3>
+              <h3 className='title-a'>
+                {' '}
+                <span>Portfolio</span>
+                <Lottie
+                  loop
+                  animationData={lottieJson}
+                  play
+                  style={{ width: 'auto', float: 'right', height: 200 }}
+                />
+              </h3>
               <div dangerouslySetInnerHTML={{ __html: html }} />
               <div className='line-mf'></div>
             </div>

@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import ReactGA from 'react-ga';
 import { ReactTyped } from 'react-typed';
 import Lottie from 'react-lottie-player';
-import lottieJson from '../porfolio.json';
+import lottieJson from '../assets/home.json';
 import { useUserProfile } from '../App';
 import './stars.scss';
 
