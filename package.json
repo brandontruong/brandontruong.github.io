@@ -7,10 +7,10 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.2.3",
-    "@types/node": "^18.11.10",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "bootstrap": "^4.3.1",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
@@ -19,8 +19,8 @@
     "lodash": "4.17.21",
     "normalize.css": "^8.0.1",
     "popper.js": "^1.16.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-ga": "^3.3.1",
     "react-lottie-player": "^1.5.4",
     "react-scripts": "5.0.1",
@@ -63,6 +63,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.14",
+    "@types/testing-library__react": "^10.2.0",
     "gh-pages": "^4.0.0",
     "sass": "^1.56.1"
   }
