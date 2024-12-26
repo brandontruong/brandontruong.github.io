@@ -20,10 +20,10 @@ const Contact = () => {
 
   return (
     <section
-      className='paralax-mf footer-paralax bg-image sect-mt4 route'
-      style={{ backgroundImage: 'url(' + imageOverlay + ')' }}
+      className='paralax-mf footer-paralax bg-image route'
+      // style={{ backgroundImage: 'url(' + imageOverlay + ')' }}
     >
-      <div className='overlay-mf'></div>
+      {/* <div className='overlay-mf'></div> */}
       <div className='container'>
         <div className='row'>
           <div className='col-sm-12'>
