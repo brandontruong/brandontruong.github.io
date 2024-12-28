@@ -17,7 +17,7 @@ a {
 }
 
 a:hover {
-  color: #0078ff;
+  color: var(--nav-color);
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -27,7 +27,7 @@ a:hover {
 }
 
 .color-a {
-  color: #0078ff;
+  color: var(--nav-color);
 }
 
 .color-d {
@@ -78,7 +78,7 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #0078ff;
+  background-color: var(--nav-color);
 }
 
 .overlay-mf {
@@ -144,7 +144,7 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #0078ff;
+  background-color: var(--nav-color);
   margin: 0 auto;
 }
 
@@ -163,7 +163,7 @@ a:hover {
   content: '';
   position: absolute;
   height: 3px;
-  background-color: #0078ff;
+  background-color: var(--nav-color);
   width: 100px;
   bottom: -12px;
 }
@@ -205,7 +205,7 @@ a:hover {
 }
 
 .socials .ico-circle:hover {
-  background-color: #0078ff;
+  background-color: var(--nav-color);
   color: #fff;
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
@@ -230,7 +230,7 @@ a:hover {
 }
 
 .list-ico span {
-  color: #0078ff;
+  color: var(--nav-color);
   margin-right: 10px;
 }
 
@@ -275,7 +275,7 @@ a:hover {
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
-  background-color: #1b1b1b;
+  background-color: var(--nav-color);
   width: 25px;
 }
 
@@ -291,7 +291,7 @@ a:hover {
   position: fixed;
   width: 42px;
   height: 42px;
-  background-color: #0078ff;
+  background-color: var(--nav-color);
   opacity: 0.7;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -458,7 +458,7 @@ NAVBAR
 
 .navbar-b.navbar-trans .nav-link:hover,
 .navbar-b.navbar-reduce .nav-link:hover {
-  color: #1b1b1b;
+  color: var(--nav-color);
 }
 
 .navbar-b.navbar-trans .nav-link:hover:before,
@@ -500,30 +500,30 @@ NAVBAR
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #0078ff;
+  color: var(--nav-color);
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
-  background-color: #0078ff;
+  background-color: var(--nav-color);
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-  color: #0078ff;
+  color: var(--nav-color);
 }
 
 .navbar-b.navbar-reduce .show > .nav-link,
 .navbar-b.navbar-reduce .active > .nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
-  color: #0078ff;
+  color: var(--nav-color);
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-  color: #0078ff;
+  color: var(--nav-color);
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
-  background-color: #1b1b1b;
+  background-color: var(--nav-color);
 }
 
 .navbar-b .navbar-brand {
@@ -551,13 +551,13 @@ NAVBAR
 }
 
 .navbar-b .dropdown-menu .dropdown-item:hover {
-  background-color: #0078ff;
+  background-color: var(--nav-color);
   color: #fff;
   transition: all 500ms ease;
 }
 
 .navbar-b .dropdown-menu .dropdown-item.active {
-  background-color: #0078ff;
+  background-color: var(--nav-color);
 }
 
 /* Hamburger Navbar */
@@ -573,7 +573,7 @@ NAVBAR
 
 .navbar-toggler span {
   display: block;
-  background-color: var(--background-color);
+  background-color: var(--nav-color);
   height: 3px;
   width: 25px;
   margin-top: 4px;
@@ -676,7 +676,7 @@ intro-content-buttons .intro-single .intro-title {
 
 .intro-single .breadcrumb {
   background-color: transparent;
-  color: #0078ff;
+  color: var(--nav-color);
 }
 
 .intro-single .breadcrumb .breadcrumb-item:before {
@@ -721,7 +721,7 @@ ABOUT
 
 .skill-mf .progress .progress-bar {
   height: 0.7rem;
-  background-color: #0078ff;
+  background-color: var(--nav-color);
   animation: progressBar 3s ease-in-out;
 }
 
@@ -770,17 +770,17 @@ PORTFOLIO
 }
 
 .work-content .w-more .w-ctegory {
-  color: #0078ff;
+  color: var(--nav-color);
 }
 
 .work-content .w-like {
   font-size: 2.5rem;
-  color: #0078ff;
+  color: var(--nav-color);
   float: right;
 }
 
 .work-content .w-like a {
-  color: #0078ff;
+  color: var(--nav-color);
 }
 
 .work-content .w-like .num-like {
@@ -827,7 +827,7 @@ TESTIMONIALS
 
 .testimonial-box .comit {
   font-size: 2rem;
-  color: #0078ff;
+  color: var(--nav-color);
   background-color: var(--background-color);
   width: 52px;
   height: 52px;
@@ -868,7 +868,7 @@ CONTACT
 */
 
 #sendmessage {
-  color: #0078ff;
+  color: var(--nav-color);
   border: 1px solid #0078ff;
   display: none;
   text-align: center;
@@ -932,7 +932,7 @@ BUTTON
 }
 
 .button-a {
-  background-color: #0078ff;
+  background-color: var(--nav-color);
   color: #fff;
   border-color: #cde1f8;
 }
