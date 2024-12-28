@@ -4,7 +4,9 @@ import { ReactTyped } from 'react-typed';
 import Lottie from 'react-lottie-player';
 import lottieJson from '../assets/home.json';
 import { useUserProfile } from '../App';
-import './stars.scss';
+import '../styles/stars.scss';
+import SnowFlake from './snowflake';
+import Stars from './stars';
 
 const Intro = () => {
   const {
@@ -24,9 +26,7 @@ const Intro = () => {
 
   return (
     <div id='home' className='intro route bg-image background'>
-      <div id='stars' />
-      <div id='stars2' />
-      <div id='stars3' />
+      <Stars />
 
       <div className='intro-content display-table'>
         <div className='table-cell'>

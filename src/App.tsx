@@ -25,6 +25,7 @@ import Contact from './components/contact.jsx';
 import BackToTop from './components/back-top.jsx';
 
 import ReactGA from 'react-ga';
+import SnowFlake from './components/snowflake';
 const TRACKING_ID = 'UA-243694608-1'; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
@@ -121,6 +122,7 @@ const App = () => {
       ) : (
         <CurrentUserProvider value={user}>
           <div className={isDarkTheme ? 'dark-theme' : ''}>
+            <SnowFlake />
             <Navbar onThemeChange={handleThemeChanged} />
             <Intro />
             <About />
