@@ -721,7 +721,7 @@ ABOUT
 
 .skill-mf .progress .progress-bar {
   height: 0.7rem;
-  background-color: var(--nav-color);
+  background-color: #0078ff;
   animation: progressBar 3s ease-in-out;
 }
 
