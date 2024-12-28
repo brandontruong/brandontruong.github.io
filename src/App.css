@@ -2,6 +2,7 @@
   --background-color: white;
   --text-color: black;
   --nav-color: #0078ff;
+  --socials-icon-color: #0078ff;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
   --background-color: black;
   --text-color: white;
   --nav-color: white;
+  --socials-icon-color: black;
   background-color: var(--background-color);
   color: var(--text-color);
   .background {
