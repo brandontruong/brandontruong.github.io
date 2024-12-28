@@ -29,6 +29,11 @@ import SnowFlake from './components/snowflake';
 const TRACKING_ID = 'UA-243694608-1'; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
+const isEvening = (date: Date): boolean => {
+  const hour = date.getHours();
+  return hour >= 18 && hour < 24; // 6 PM to 11:59 PM
+};
+
 /**
  * A helper to create a Context and Provider with no upfront default value, and
  * without having to check for undefined all the time.
@@ -47,6 +52,11 @@ function createCtx<A extends {} | null>() {
 // We still have to specify a type, but no default!
 export const [useUserProfile, CurrentUserProvider] = createCtx<{}>();
 
+interface UserSettings {
+  // language: string;
+  theme: 'light' | 'dark';
+}
+
 const App = () => {
   const [user, setUser] = useState({
     firstName: '',
@@ -60,13 +70,30 @@ const App = () => {
       url: '',
     },
     pictures: [{ url: '' }],
+    settings: {
+      theme: 'light',
+    },
   });
 
   const [loading, setLoading] = useState(true);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
+  // Save settings to local storage
+  const saveSettings = (newSettings: UserSettings) => {
+    // setSettings(newSettings);
+    localStorage.setItem('userSettings', JSON.stringify(newSettings));
+  };
+
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
+
+    const savedSettings = localStorage.getItem('userSettings');
+    const { theme } = savedSettings
+      ? (JSON.parse(savedSettings) as UserSettings)
+      : {
+          theme: isEvening(new Date()) ? 'dark' : 'light',
+        };
+    setIsDarkTheme(theme === 'dark');
 
     const fetchPorfolios = async () => {
       const { userProfile } = await request(
@@ -100,19 +127,25 @@ const App = () => {
       );
 
       setUser((previousState) => {
-        return { ...previousState, ...userProfile };
+        return {
+          ...previousState,
+          ...userProfile,
+          settings: {
+            theme,
+          },
+        };
       });
 
       setLoading(() => {
         return false;
       });
     };
-
     fetchPorfolios();
   }, []);
 
   const handleThemeChanged = (isDarkTheme: boolean) => {
     setIsDarkTheme(isDarkTheme);
+    saveSettings({ theme: isDarkTheme ? 'dark' : 'light' });
   };
 
   return (

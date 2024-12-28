@@ -14,21 +14,22 @@ const ImageButton = styled.button`
 `;
 
 const Navbar = ({ onThemeChange }) => {
-  const { pictures: logos } = useUserProfile();
+  const {
+    pictures: logos,
+    settings: { theme },
+  } = useUserProfile();
 
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(theme === 'dark');
 
   const toggleTheme = () => {
-    setIsDarkTheme((prev) => !prev);
+    const theme = !isDarkTheme;
+    setIsDarkTheme(theme);
+    onThemeChange(theme);
   };
 
   const [state, setState] = useState({
     logo: logos[0],
   });
-
-  useEffect(() => {
-    onThemeChange(isDarkTheme);
-  }, [isDarkTheme, onThemeChange]);
 
   useEffect(() => {
     const nav = $('nav');
