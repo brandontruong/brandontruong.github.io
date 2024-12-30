@@ -26,7 +26,7 @@ const About = () => {
                         className='about-img'
                         style={{ textAlign: 'center' }}
                       >
-                        <img className='img-fluid rounded b-shadow-a' alt='' />
+                        <img className='rounded b-shadow-a' alt='' />
                       </div>
                     </div>
                   </div>

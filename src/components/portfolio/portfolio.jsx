@@ -1,9 +1,10 @@
 import { request } from 'graphql-request';
 import { useEffect, useState } from 'react';
 import _ from 'lodash';
-import { useUserProfile } from '../App';
 import Lottie from 'react-lottie-player';
-import lottieJson from '../assets/porfolio.json';
+import lottieJson from '../../assets/porfolio.json';
+import { useUserProfile } from '../../App';
+import './portfolio.scss';
 
 const Portfolio = () => {
   const {
@@ -65,6 +66,49 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+
+        {state.portfolio.map((item) => {
+          return (
+            <div className='card' key={item.title}>
+              <div className='title-container'>
+                <h2>{item.title}</h2>
+                <div className='work-img'>
+                  <img src={item.image[0].url} alt='' />
+                </div>
+              </div>
+              <div className='card-details'>
+                <h2>{item.title}</h2>
+                <h3>{item.subTitle}</h3>
+                <p>{item.technologies}</p>
+                <p>
+                  <a href={item.image[0].url} data-lightbox='gallery-vmarine'>
+                    Read more
+                  </a>
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      {/* <div className='container'>
+        <div className='row'>
+          <div className='col-sm-12'>
+            <div className='title-box text-center'>
+              <h3 className='title-a'>
+                {' '}
+                <span>Portfolio</span>
+                <Lottie
+                  loop
+                  animationData={lottieJson}
+                  play
+                  style={{ width: 'auto', float: 'right', height: 200 }}
+                />
+              </h3>
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+              <div className='line-mf'></div>
+            </div>
+          </div>
+        </div>
         <div className='row'>
           {state.portfolio.map((item) => {
             return (
@@ -102,7 +146,7 @@ const Portfolio = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

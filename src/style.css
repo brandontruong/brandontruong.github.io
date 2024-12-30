@@ -933,7 +933,7 @@ BUTTON
 
 .button-a {
   background-color: var(--nav-color);
-  color: #fff;
+  color: var(--background-color);
   border-color: #cde1f8;
 }
 
