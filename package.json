@@ -16,7 +16,7 @@
     "graphql-request": "^5.0.0",
     "jquery": "^3.6.1",
     "lightbox2": "^2.11.3",
-    "lodash": "4.17.21",
+    "lodash": "4.17.23",
     "normalize.css": "^8.0.1",
     "popper.js": "^1.16.1",
     "react": "^19.0.0",
