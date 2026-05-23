@@ -1233,9 +1233,9 @@
     strip-json-comments "^3.1.1"
 
 "@graphql-typed-document-node/core@^3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.1.1.tgz#076d78ce99822258cf813ecc1e7fa460fa74d052"
-  integrity sha512-NQ17ii0rK1b34VZonlmT2QMJFI70m0TRwbknO/ihlbatXyaktDhN/98vBiUU6kNBPljqGqyIrl2T4nY2RpFANg==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.2.0.tgz#5f3d96ec6b2354ad6d8a28bf216a1d97b5426861"
+  integrity sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==
 
 "@humanwhocodes/config-array@^0.10.5":
   version "0.10.5"
@@ -3367,11 +3367,11 @@ cosmiconfig@^7.0.0:
     yaml "^1.10.0"
 
 cross-fetch@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.5.tgz#e1389f44d9e7ba767907f7af8454787952ab534f"
-  integrity sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.2.0.tgz#34e9192f53bc757d6614304d9e5e6fb4edb782e3"
+  integrity sha512-Q+xVJLoGOeIMXZmbUK4HYk+69cQH6LudR0Vu/pRm2YlU/hDV9CiS0gKUMaWY5f2NeUH9C1nV3bsTlCo0FsTV1Q==
   dependencies:
-    node-fetch "2.6.7"
+    node-fetch "^2.7.0"
 
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
@@ -4929,9 +4929,9 @@ grapheme-splitter@^1.0.4:
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
 graphql-request@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-5.0.0.tgz#7504a807d0e11be11a3c448e900f0cc316aa18ef"
-  integrity sha512-SpVEnIo2J5k2+Zf76cUkdvIRaq5FMZvGQYnA4lUWYbc99m+fHh4CZYRRO/Ff4tCLQ613fzCm3SiDT64ubW5Gyw==
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-5.2.0.tgz#a05fb54a517d91bb2d7aefa17ade4523dc5ebdca"
+  integrity sha512-pLhKIvnMyBERL0dtFI3medKqWOz/RhHdcgbZ+hMMIb32mEPa5MJSzS4AuXxfI4sRAu6JVVk5tvXuGfCWl9JYWQ==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
     cross-fetch "^3.1.5"
@@ -4939,9 +4939,9 @@ graphql-request@^5.0.0:
     form-data "^3.0.0"
 
 graphql@^16.6.0:
-  version "16.6.0"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.6.0.tgz#c2dcffa4649db149f6282af726c8c83f1c7c5fdb"
-  integrity sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==
+  version "16.14.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.14.0.tgz#f1128a74b16a34d1245c8436bb07b488d87b83e1"
+  integrity sha512-BBvQ/406p+4CZbTpCbVPSxfzrZrbnuWSP1ELYgyS6B+hNeKzgrdB4JczCa5VZUBQrDa9hUngm0KnexY6pJRN5Q==
 
 gzip-size@^6.0.0:
   version "6.0.0"
@@ -6598,10 +6598,10 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
-node-fetch@2.6.7:
-  version "2.6.7"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
-  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
+node-fetch@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
+  integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -7759,12 +7759,12 @@ react-dev-utils@^12.0.1:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
-react-dom@^19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0.tgz#43446f1f01c65a4cd7f7588083e686a6726cfb57"
-  integrity sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==
+react-dom@^19.2.6:
+  version "19.2.6"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.2.6.tgz#44a81b0bcca22da814c00847d09d01c8615529b7"
+  integrity sha512-0prMI+hvBbPjsWnxDLxlCGyM8PN6UuWjEUCYmZhO67xIV9Xasa/r/vDnq+Xyq4Lo27g8QSbO5YzARu0D1Sps3g==
   dependencies:
-    scheduler "^0.25.0"
+    scheduler "^0.27.0"
 
 react-error-overlay@^6.0.11:
   version "6.0.11"
@@ -7867,10 +7867,10 @@ react-typed@^2.0.12:
   dependencies:
     typed.js "^2.1.0"
 
-react@^19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-19.0.0.tgz#6e1969251b9f108870aa4bff37a0ce9ddfaaabdd"
-  integrity sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==
+react@^19.2.6:
+  version "19.2.6"
+  resolved "https://registry.yarnpkg.com/react/-/react-19.2.6.tgz#3dadb8e12b2a7934c1d5317973e5dce1301f9a4d"
+  integrity sha512-sfWGGfavi0xr8Pg0sVsyHMAOziVYKgPLNrS7ig+ivMNb3wbCBw3KxtflsGBAwD3gYQlE/AEZsTLgToRrSCjb0Q==
 
 read-cache@^1.0.0:
   version "1.0.0"
@@ -8191,10 +8191,10 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0.tgz#336cd9768e8cceebf52d3c80e3dcf5de23e7e015"
-  integrity sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==
+scheduler@^0.27.0:
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.27.0.tgz#0c4ef82d67d1e5c1e359e8fc76d3a87f045fe5bd"
+  integrity sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==
 
 schema-utils@2.7.0:
   version "2.7.0"
@@ -9069,10 +9069,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.9.3:
-  version "4.9.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.3.tgz#3aea307c1746b8c384435d8ac36b8a2e580d85db"
-  integrity sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==
+typescript@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.3.tgz#90251dc007916e972786cb94d74d15b185577d21"
+  integrity sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
